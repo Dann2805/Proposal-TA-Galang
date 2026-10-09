@@ -1,0 +1,519 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{fierrosilva2026}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=18b7b7ce59d4b137a5ca3b1990c1de55}{%
+           family={Fierro-Silva},
+           familyi={F\bibinithyphendelim S\bibinitperiod},
+           given={Carlos\bibnamedelima Julio},
+           giveni={C\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=74d26bf42b91cd1420186b60f61a3ea1}{%
+           family={Del-Valle-Soto},
+           familyi={D\bibinithyphendelim V\bibinithyphendelim S\bibinitperiod},
+           given={Carolina},
+           giveni={C\bibinitperiod}}}%
+        {{hash=2605e4d71072e29684985c29960d87c9}{%
+           family={Mostafa},
+           familyi={M\bibinitperiod},
+           given={Samih\bibnamedelima M.},
+           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=7e92a1836004c524de0ede287a915db6}{%
+           family={Varela-Aldás},
+           familyi={V\bibinithyphendelim A\bibinitperiod},
+           given={José},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{028e04222a34395479ec9c3e3a1ab13a}
+      \strng{fullhash}{1dfe24c229f88b10410e62245ce8da3a}
+      \strng{fullhashraw}{1dfe24c229f88b10410e62245ce8da3a}
+      \strng{bibnamehash}{1dfe24c229f88b10410e62245ce8da3a}
+      \strng{authorbibnamehash}{1dfe24c229f88b10410e62245ce8da3a}
+      \strng{authornamehash}{028e04222a34395479ec9c3e3a1ab13a}
+      \strng{authorfullhash}{1dfe24c229f88b10410e62245ce8da3a}
+      \strng{authorfullhashraw}{1dfe24c229f88b10410e62245ce8da3a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Algorithms}
+      \field{number}{4}
+      \field{title}{Recent Advances in Multi-Camera Computer Vision for Industry 4.0 and Smart Cities: A Systematic Review}
+      \field{volume}{19}
+      \field{year}{2026}
+      \field{pages}{249}
+      \range{pages}{1}
+    \endentry
+    \entry{hairurizal2026}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=947fa36e198ad7d0e491ed83628f2327}{%
+           family={Hairurizal},
+           familyi={H\bibinitperiod},
+           given={Luqman\bibnamedelima Hakim},
+           giveni={L\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=96e50081415c40ec78efea7160c1e293}{%
+           family={Rifin},
+           familyi={R\bibinitperiod},
+           given={Rozi},
+           giveni={R\bibinitperiod}}}%
+        {{hash=04a55a9b53099724d456cc35c0cdeee5}{%
+           family={Mokhtar},
+           familyi={M\bibinitperiod},
+           given={Siti\bibnamedelimb Musliha\bibnamedelima Ajmal},
+           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=8bcc05111ceeeaf26fe38b13e218c96b}{%
+           family={Hussin},
+           familyi={H\bibinitperiod},
+           given={Mohamad\bibnamedelima Zhafran},
+           giveni={M\bibinitperiod\bibinitdelim Z\bibinitperiod}}}%
+        {{hash=7f478e511ec702435091b09480cc3ea9}{%
+           family={Kadiran},
+           familyi={K\bibinitperiod},
+           given={Kamaru\bibnamedelima Adzha},
+           giveni={K\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{6ad1fc773f931a49bd934b2017193d26}
+      \strng{fullhash}{1d196cd78fa02c5b4fd378e96ce9af8e}
+      \strng{fullhashraw}{1d196cd78fa02c5b4fd378e96ce9af8e}
+      \strng{bibnamehash}{1d196cd78fa02c5b4fd378e96ce9af8e}
+      \strng{authorbibnamehash}{1d196cd78fa02c5b4fd378e96ce9af8e}
+      \strng{authornamehash}{6ad1fc773f931a49bd934b2017193d26}
+      \strng{authorfullhash}{1d196cd78fa02c5b4fd378e96ce9af8e}
+      \strng{authorfullhashraw}{1d196cd78fa02c5b4fd378e96ce9af8e}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of ASIAN Scientific Research}
+      \field{number}{1}
+      \field{title}{Customer Detection and Tracking Using Computer Vision, YOLO, and Hardware Integration: A Retail Analytics Approach}
+      \field{volume}{6}
+      \field{year}{2026}
+      \field{pages}{173}
+      \range{pages}{1}
+    \endentry
+    \entry{shili2024electronics}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=8c9f1e4b823bd7bcb346a350ed98777b}{%
+           family={Shili},
+           familyi={S\bibinitperiod},
+           given={Mohamed},
+           giveni={M\bibinitperiod}}}%
+        {{hash=6bd9db6d7ce6c0c49bd6cb35712469fd}{%
+           family={Jayasingh},
+           familyi={J\bibinitperiod},
+           given={Sudarsan},
+           giveni={S\bibinitperiod}}}%
+        {{hash=e0f8a9ff669465f15b091f1cb3b712bd}{%
+           family={Hammedi},
+           familyi={H\bibinitperiod},
+           given={Salah},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{3da980f419595d1aefc11d9a41aa5ba0}
+      \strng{fullhash}{7ee40a75f16f4bcd8f1ebab0a8e4ce4c}
+      \strng{fullhashraw}{7ee40a75f16f4bcd8f1ebab0a8e4ce4c}
+      \strng{bibnamehash}{7ee40a75f16f4bcd8f1ebab0a8e4ce4c}
+      \strng{authorbibnamehash}{7ee40a75f16f4bcd8f1ebab0a8e4ce4c}
+      \strng{authornamehash}{3da980f419595d1aefc11d9a41aa5ba0}
+      \strng{authorfullhash}{7ee40a75f16f4bcd8f1ebab0a8e4ce4c}
+      \strng{authorfullhashraw}{7ee40a75f16f4bcd8f1ebab0a8e4ce4c}
+      \field{extraname}{1}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Electronics}
+      \field{number}{23}
+      \field{title}{Advanced Customer Behavior Tracking and Heatmap Analysis with YOLOv5 and DeepSORT in Retail Environment}
+      \field{volume}{13}
+      \field{year}{2024}
+      \field{pages}{4730}
+      \range{pages}{1}
+    \endentry
+    \entry{narvilas2022}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=a82911a7d76e9ca47b761150021b41c4}{%
+           family={Narvilas},
+           familyi={N\bibinitperiod},
+           given={Gintaras},
+           giveni={G\bibinitperiod}}}%
+        {{hash=0c225d8dd1237aa98ab5c381b0e81f04}{%
+           family={Urbonas},
+           familyi={U\bibinitperiod},
+           given={Valdas},
+           giveni={V\bibinitperiod}}}%
+        {{hash=d533fc03cde5f517d40974ef23765e72}{%
+           family={Butkevičiūtė},
+           familyi={B\bibinitperiod},
+           given={Eglė},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{5bda59d971520fbdac878ab59394180f}
+      \strng{fullhash}{138a695cff081c243ef1f7a3ede0255b}
+      \strng{fullhashraw}{138a695cff081c243ef1f7a3ede0255b}
+      \strng{bibnamehash}{138a695cff081c243ef1f7a3ede0255b}
+      \strng{authorbibnamehash}{138a695cff081c243ef1f7a3ede0255b}
+      \strng{authornamehash}{5bda59d971520fbdac878ab59394180f}
+      \strng{authorfullhash}{138a695cff081c243ef1f7a3ede0255b}
+      \strng{authorfullhashraw}{138a695cff081c243ef1f7a3ede0255b}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Baltic Journal of Modern Computing}
+      \field{number}{3}
+      \field{title}{Human’s Behavior Tracking in a Store Using Multiple Security Cameras}
+      \field{volume}{10}
+      \field{year}{2022}
+      \field{pages}{526\bibrangedash 544}
+      \range{pages}{19}
+    \endentry
+    \entry{panagos2026}{article}{}{}
+      \name{author}{7}{}{%
+        {{hash=39136258eac798a8666d967808bacac3}{%
+           family={Panagos},
+           familyi={P\bibinitperiod},
+           given={Iason-Ioannis},
+           giveni={I\bibinithyphendelim I\bibinitperiod}}}%
+        {{hash=8a98646152a19e68113a8655631973b3}{%
+           family={Giotis},
+           familyi={G\bibinitperiod},
+           given={Angelos\bibnamedelima P.},
+           giveni={A\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=649ee67c8ce7c7df9677e20c5c4b753c}{%
+           family={Plissiti},
+           familyi={P\bibinitperiod},
+           given={Marina\bibnamedelima E.},
+           giveni={M\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=f514e9cb715a0974b5d3634e76ff036d}{%
+           family={Stamati},
+           familyi={S\bibinitperiod},
+           given={Vasiliki},
+           giveni={V\bibinitperiod}}}%
+        {{hash=eadcaf9ec1998f50d56ab586bb059736}{%
+           family={Gartzonikas},
+           familyi={G\bibinitperiod},
+           given={George},
+           giveni={G\bibinitperiod}}}%
+        {{hash=a957cd47c567a548ff8edf58e3f85e78}{%
+           family={Vrigkas},
+           familyi={V\bibinitperiod},
+           given={Michalis},
+           giveni={M\bibinitperiod}}}%
+        {{hash=2a3e162fc2e31f2f6ea28cf294a694c6}{%
+           family={Nikou},
+           familyi={N\bibinitperiod},
+           given={Christophoros},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{1c613baa9ba8d4679950f486435d16b0}
+      \strng{fullhash}{f36cd56c1807d7ace90a402ccea88f47}
+      \strng{fullhashraw}{f36cd56c1807d7ace90a402ccea88f47}
+      \strng{bibnamehash}{1c613baa9ba8d4679950f486435d16b0}
+      \strng{authorbibnamehash}{1c613baa9ba8d4679950f486435d16b0}
+      \strng{authornamehash}{1c613baa9ba8d4679950f486435d16b0}
+      \strng{authorfullhash}{f36cd56c1807d7ace90a402ccea88f47}
+      \strng{authorfullhashraw}{f36cd56c1807d7ace90a402ccea88f47}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Electronics}
+      \field{number}{14}
+      \field{title}{Demographic-Aware Multi-Object Tracking for Retail Environments via Temporal Consistency and Joint Association}
+      \field{volume}{15}
+      \field{year}{2026}
+      \field{pages}{3089}
+      \range{pages}{1}
+    \endentry
+    \entry{mendes2023multi}{article}{}{}
+      \name{author}{6}{}{%
+        {{hash=afacdf17b731d02bd3b010f84b012e0d}{%
+           family={Mendes},
+           familyi={M\bibinitperiod},
+           given={Diogo},
+           giveni={D\bibinitperiod}}}%
+        {{hash=f6fd32fdff28e8b737ab7ed09a94fc14}{%
+           family={Correia},
+           familyi={C\bibinitperiod},
+           given={Simão},
+           giveni={S\bibinitperiod}}}%
+        {{hash=6df6a6110a96bb981451de275f4d8d97}{%
+           family={Jorge},
+           familyi={J\bibinitperiod},
+           given={Pedro},
+           giveni={P\bibinitperiod}}}%
+        {{hash=e6d9db2dadd7693d731758a60ff6c361}{%
+           family={Brandão},
+           familyi={B\bibinitperiod},
+           given={Tomás},
+           giveni={T\bibinitperiod}}}%
+        {{hash=2939d88481929a38549c18fb1b7ddc2c}{%
+           family={Arriaga},
+           familyi={A\bibinitperiod},
+           given={Patrícia},
+           giveni={P\bibinitperiod}}}%
+        {{hash=2a40542ee658568807e900f8492bf786}{%
+           family={Nunes},
+           familyi={N\bibinitperiod},
+           given={Luís},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{5e95f43bb7eb540be629ecc5dfd0099d}
+      \strng{fullhash}{06b2c375e55dbf7cfc1374044df54922}
+      \strng{fullhashraw}{06b2c375e55dbf7cfc1374044df54922}
+      \strng{bibnamehash}{06b2c375e55dbf7cfc1374044df54922}
+      \strng{authorbibnamehash}{06b2c375e55dbf7cfc1374044df54922}
+      \strng{authornamehash}{5e95f43bb7eb540be629ecc5dfd0099d}
+      \strng{authorfullhash}{06b2c375e55dbf7cfc1374044df54922}
+      \strng{authorfullhashraw}{06b2c375e55dbf7cfc1374044df54922}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Applied Sciences}
+      \field{number}{20}
+      \field{title}{Multi-Camera Person Re-Identification Based on Trajectory Data}
+      \field{volume}{13}
+      \field{year}{2023}
+      \field{pages}{11578}
+      \range{pages}{1}
+    \endentry
+    \entry{bayraktar2025retrackvlm}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=9668742aa70ee6379bcba55087715d35}{%
+           family={Bayraktar},
+           familyi={B\bibinitperiod},
+           given={Ertugrul},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{9668742aa70ee6379bcba55087715d35}
+      \strng{fullhash}{9668742aa70ee6379bcba55087715d35}
+      \strng{fullhashraw}{9668742aa70ee6379bcba55087715d35}
+      \strng{bibnamehash}{9668742aa70ee6379bcba55087715d35}
+      \strng{authorbibnamehash}{9668742aa70ee6379bcba55087715d35}
+      \strng{authornamehash}{9668742aa70ee6379bcba55087715d35}
+      \strng{authorfullhash}{9668742aa70ee6379bcba55087715d35}
+      \strng{authorfullhashraw}{9668742aa70ee6379bcba55087715d35}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Applied Sciences}
+      \field{number}{4}
+      \field{title}{ReTrackVLM: Transformer-Enhanced Multi-Object Tracking with Cross-Modal Embeddings and Zero-Shot Re-Identification Integration}
+      \field{volume}{15}
+      \field{year}{2025}
+      \field{pages}{1907}
+      \range{pages}{1}
+    \endentry
+    \entry{senarath2022}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=86325c0e2cdb17e10ce2ee9ba5bc4e1f}{%
+           family={Senarath},
+           familyi={S\bibinitperiod},
+           given={Shashimal},
+           giveni={S\bibinitperiod}}}%
+        {{hash=54050048fb1302b7c35236ce9e4aef23}{%
+           family={Pathirana},
+           familyi={P\bibinitperiod},
+           given={Primesh},
+           giveni={P\bibinitperiod}}}%
+        {{hash=f01382ff7bca48ad7086e69ee7fd037e}{%
+           family={Meedeniya},
+           familyi={M\bibinitperiod},
+           given={Dulani},
+           giveni={D\bibinitperiod}}}%
+        {{hash=823b31d281df30c4fc7f6afa859c6941}{%
+           family={Jayarathna},
+           familyi={J\bibinitperiod},
+           given={Sampath},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{e397ee3ca195cbd334e0247775eb7f18}
+      \strng{fullhash}{962642a815c03830d9a0b1a4f7b483de}
+      \strng{fullhashraw}{962642a815c03830d9a0b1a4f7b483de}
+      \strng{bibnamehash}{962642a815c03830d9a0b1a4f7b483de}
+      \strng{authorbibnamehash}{962642a815c03830d9a0b1a4f7b483de}
+      \strng{authornamehash}{e397ee3ca195cbd334e0247775eb7f18}
+      \strng{authorfullhash}{962642a815c03830d9a0b1a4f7b483de}
+      \strng{authorfullhashraw}{962642a815c03830d9a0b1a4f7b483de}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Access}
+      \field{title}{Customer Gaze Estimation in Retail Using Deep Learning}
+      \field{volume}{10}
+      \field{year}{2022}
+      \field{pages}{64904\bibrangedash 64916}
+      \range{pages}{13}
+    \endentry
+    \entry{zhao2025}{article}{}{}
+      \name{author}{7}{}{%
+        {{hash=ca8b6782e850e0d17eb1827c99ebdfda}{%
+           family={Zhao},
+           familyi={Z\bibinitperiod},
+           given={Yawen},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=a606c70c5e19e71a3f38d3f14787e211}{%
+           family={Solihin},
+           familyi={S\bibinitperiod},
+           given={Mahmud\bibnamedelima Iwan},
+           giveni={M\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+        {{hash=b6c08c67c28b974e338936aaa0231741}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Defu},
+           giveni={D\bibinitperiod}}}%
+        {{hash=6486eddd1858d15d4b77cea5c5215a10}{%
+           family={Cai},
+           familyi={C\bibinitperiod},
+           given={Bingyu},
+           giveni={B\bibinitperiod}}}%
+        {{hash=fd2935588a7f13ab3a06bc854b85594f}{%
+           family={Chow},
+           familyi={C\bibinitperiod},
+           given={Li\bibnamedelima Sze},
+           giveni={L\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=853982f4019f1c6a07e046f2c29c7b77}{%
+           family={Handayani},
+           familyi={H\bibinitperiod},
+           given={Dini},
+           giveni={D\bibinitperiod}}}%
+        {{hash=ef36e252c0a8154ed82186ff8a381dce}{%
+           family={Prabuwono},
+           familyi={P\bibinitperiod},
+           given={Anton\bibnamedelima Satria},
+           giveni={A\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{14cdb85528e7dd42309f56c3385aa085}
+      \strng{fullhash}{7ec822d9fe45c0ec46ab365f989f7e31}
+      \strng{fullhashraw}{7ec822d9fe45c0ec46ab365f989f7e31}
+      \strng{bibnamehash}{14cdb85528e7dd42309f56c3385aa085}
+      \strng{authorbibnamehash}{14cdb85528e7dd42309f56c3385aa085}
+      \strng{authornamehash}{14cdb85528e7dd42309f56c3385aa085}
+      \strng{authorfullhash}{7ec822d9fe45c0ec46ab365f989f7e31}
+      \strng{authorfullhashraw}{7ec822d9fe45c0ec46ab365f989f7e31}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{PLOS One}
+      \field{number}{10}
+      \field{title}{LSR-YOLO: A lightweight and fast model for retail products detection}
+      \field{volume}{20}
+      \field{year}{2025}
+      \field{pages}{e0334216}
+      \range{pages}{-1}
+    \endentry
+    \entry{yang2026}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=9080c2ec18ac5aee8aadabf1b3aadac7}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Moushiqi},
+           giveni={M\bibinitperiod}}}%
+        {{hash=26b85fea2427c418c32b9002bac28690}{%
+           family={Cai},
+           familyi={C\bibinitperiod},
+           given={Junjie},
+           giveni={J\bibinitperiod}}}%
+        {{hash=c5dfee9c16dc02d27867514d270078b7}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Yuanyuan},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=383ef476f431eaf108d4a77c75c2def5}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Jian},
+           giveni={J\bibinitperiod}}}%
+        {{hash=3ea9991f35e8129c4a974a4deb8d87d2}{%
+           family={Xie},
+           familyi={X\bibinitperiod},
+           given={Kai},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{62fb8f210f6d4b284e48c8ce66cb782b}
+      \strng{fullhash}{724bca67978c36b6c0907181aa68b945}
+      \strng{fullhashraw}{724bca67978c36b6c0907181aa68b945}
+      \strng{bibnamehash}{724bca67978c36b6c0907181aa68b945}
+      \strng{authorbibnamehash}{724bca67978c36b6c0907181aa68b945}
+      \strng{authornamehash}{62fb8f210f6d4b284e48c8ce66cb782b}
+      \strng{authorfullhash}{724bca67978c36b6c0907181aa68b945}
+      \strng{authorfullhashraw}{724bca67978c36b6c0907181aa68b945}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Sensors}
+      \field{number}{10}
+      \field{title}{Real-Time Small Retail Product Detection in Low-Light Intelligent Cabinets Under Complex Backgrounds}
+      \field{volume}{26}
+      \field{year}{2026}
+      \field{pages}{3264}
+      \range{pages}{1}
+    \endentry
+    \entry{shili2024algorithms}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=8c9f1e4b823bd7bcb346a350ed98777b}{%
+           family={Shili},
+           familyi={S\bibinitperiod},
+           given={Mohamed},
+           giveni={M\bibinitperiod}}}%
+        {{hash=5eb3610e653fdc3441090754d68e0596}{%
+           family={Sohaib},
+           familyi={S\bibinitperiod},
+           given={Osama},
+           giveni={O\bibinitperiod}}}%
+        {{hash=e0f8a9ff669465f15b091f1cb3b712bd}{%
+           family={Hammedi},
+           familyi={H\bibinitperiod},
+           given={Salah},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{3da980f419595d1aefc11d9a41aa5ba0}
+      \strng{fullhash}{d8ed888311e4ae1cb7aa6d467d35b777}
+      \strng{fullhashraw}{d8ed888311e4ae1cb7aa6d467d35b777}
+      \strng{bibnamehash}{d8ed888311e4ae1cb7aa6d467d35b777}
+      \strng{authorbibnamehash}{d8ed888311e4ae1cb7aa6d467d35b777}
+      \strng{authornamehash}{3da980f419595d1aefc11d9a41aa5ba0}
+      \strng{authorfullhash}{d8ed888311e4ae1cb7aa6d467d35b777}
+      \strng{authorfullhashraw}{d8ed888311e4ae1cb7aa6d467d35b777}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Algorithms}
+      \field{number}{11}
+      \field{title}{You Only Look Once Version 5 and Deep Simple Online and Real-Time Tracking Algorithms for Real-Time Customer Behavior Tracking and Retail Optimization}
+      \field{volume}{17}
+      \field{year}{2024}
+      \field{pages}{525}
+      \range{pages}{1}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

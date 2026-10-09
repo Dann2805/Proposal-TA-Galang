@@ -1,0 +1,28 @@
+\contentsline {chapter}{ABSTRAK}{v}{chapter*.2}%
+\contentsline {chapter}{DAFTAR ISI}{ix}{chapter*.3}%
+\contentsline {chapter}{DAFTAR GAMBAR}{xi}{chapter*.4}%
+\contentsline {chapter}{DAFTAR TABEL}{xiii}{chapter*.5}%
+\contentsline {chapter}{\numberline {1}PENDAHULUAN}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Latar Belakang}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Rumusan Masalah}{2}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Batasan Masalah atau Ruang Lingkup}{3}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Tujuan}{3}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Manfaat}{3}{section.1.5}%
+\contentsline {chapter}{\numberline {2}TINJAUAN PUSTAKA}{5}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Analitik Perilaku Konsumen pada Area Komersial}{5}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Deteksi Objek (YOLO)}{5}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Multi-Object Tracking (MOT)}{5}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Paradigma Tracking-by-Detection}{5}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Tantangan Oklusi dan Fragmentasi Identitas (Identity Churn)}{6}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Algoritma Pelacakan Objek Kontemporer}{6}{subsection.2.3.3}%
+\contentsline {section}{\numberline {2.4}Metrik Evaluasi Pelacakan Standar Akademik}{7}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Penelitian Terkait}{7}{section.2.5}%
+\contentsline {chapter}{\numberline {3}METODOLOGI PENELITIAN}{9}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Diagram Alir Penelitian}{9}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Pengumpulan Data dan Lingkungan Eksperimen}{10}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Karakteristik Data Video Uji}{10}{subsection.3.2.1}%
+\contentsline {chapter}{\numberline {4}HASIL YANG DIHARAPKAN}{13}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Hasil yang Diharapkan dari Penelitian}{13}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Hasil Pendahuluan}{13}{section.4.2}%
+\contentsline {chapter}{\numberline {5}JADWAL PENELITIAN}{15}{chapter.5}%
+\contentsline {chapter}{DAFTAR PUSTAKA}{17}{chapter*.10}%
