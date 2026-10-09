@@ -1,44 +1,47 @@
-# Template LaTeX Proposal Tugas Akhir ITS
+# Proposal Tugas Akhir - Institut Teknologi Sepuluh Nopember (ITS)
 
-[![latest version](https://img.shields.io/github/v/release/b201lab/template-proposal-ta-its)](https://github.com/b201lab/template-proposal-ta-its/releases/)
-[![commits since latest version](https://img.shields.io/github/commits-since/b201lab/template-proposal-ta-its/latest)](https://github.com/b201lab/template-proposal-ta-its/commits/master)
-[![repo size](https://img.shields.io/github/repo-size/b201lab/template-proposal-ta-its)](https://github.com/b201lab/template-buku-ta-its)
-[![license](https://img.shields.io/github/license/b201lab/template-proposal-ta-its)](./LICENSE)
-[![build status](https://img.shields.io/github/actions/workflow/status/b201lab/template-proposal-ta-its/ci.yml?branch=main)](https://github.com/b201lab/template-proposal-ta-its/actions)
+> **Evaluasi Kinerja Algoritma Multi-Object Tracking (MOT) Berbasis YOLO11 untuk Analitik Perilaku Konsumen pada Lingkungan Ritel Komersial**
 
-Repositori ini berisi template [LaTeX](https://www.latex-project.org/) dari proposal tugas akhir yang disesuaikan dengan format yang diberlakukan oleh [Institut Teknologi Sepuluh Nopember](https://www.its.ac.id/) (ITS). Template yang ada pada repositori ini bersifat universal dan bisa digunakan oleh setiap departemen yang ada di ITS karena sudah mengikuti aturan resmi yang berdasarkan pada [SK Rektor ITS No. 280 Tahun 2022](https://www.its.ac.id/pendidikan/wp-content/uploads/sites/112/2022/03/280-SK-Rektor-ttg-Pedoman-Penyusunan-Laporan-Tugas-Akhir-Sarjana-Sarjana-Terapan.pdf) tentang pedoman penyusunan laporan tugas/proyek akhir program sarjana dan sarjana terapan.
+---
 
-> Contoh file PDF dari template ini bisa dilihat di [sini](https://b201lab.github.io/template-proposal-ta-its/proposal-ta.pdf).
+## 📌 Informasi Penelitian
+- **Peneliti**: Danendra Galang Yugastama
+- **Program Studi**: S1 Teknik Informatika / Teknologi Informasi / Rekayasa Sistem *(sesuaikan)*
+- **Departemen**: Teknik Informatika / Teknologi Informasi *(sesuaikan)*
+- **Fakultas**: FTEIC
+- **Institusi**: Institut Teknologi Sepuluh Nopember (ITS), Surabaya
 
-## Fitur
+---
 
-- Format ukuran halaman, margin, dan font yang disesuaikan dengan aturan yang berlaku di ITS.
-- Disertai bagian-bagian yang diperlukan seperti pengesahan, latar belakang, tinjauan pustaka, dsb.
-- Pembuatan daftar pustaka secara otomatis.
-- Penomoran gambar dan referensi secara otomatis.
-- Penambahan gambar dengan format JPEG, PNG, maupun format lain pada dokumen.
-- Pembuatan daftar, persamaan ilmiah, dan tabel pada dokumen.
-- Kompilasi dokumen secara otomatis menggunakan [GitHub Actions](https://github.com/features/actions).
+## 📖 Ringkasan Penelitian
 
-## Cara Menggunakan Template
+Sistem analitik video ritel fisik (*brick-and-mortar*) berbasis visi komputer sering menghadapi kendala penurunan akurasi akibat fenomena oklusi visual dan kerumunan pengunjung yang padat. Oklusi berkepanjangan memicu terjadinya **fragmentasi identitas (*identity churn / switches*)**, di mana algoritma pelacak gagal mempertahankan identitas objek dan menetapkan ID baru secara keliru. Fenomena ini mendistorsi penghitungan metrik operasional bisnis, seperti durasi waktu singgah (*dwell time*) dan estimasi waktu antrean di kasir.
 
-Bagian utama dokumen terletak pada file [`main.tex`](./main.tex) yang digunakan untuk mengatur package LaTeX yang digunakan serta file lain yang akan diinputkan pada dokumen.
-Setelah kompilasi dilakukan, hasilnya akan ada beberapa file `main` dengan format yang berbeda.
-Yang terutama adalah file `main.pdf` yang merupakan hasil akhir dari proses kompilasi dokumen.
+Penelitian ini mengadopsi paradigma **Tracking-by-Detection (TbD)** dengan mengunci model **YOLO11** sebagai variabel kontrol pada tahap deteksi, serta mengevaluasi empat algoritma pelacakan multi-objek kontemporer sebagai variabel independen:
+1. **ByteTrack** (Asosiasi deteksi skor rendah & tinggi)
+2. **BoT-SORT** (Kompensasi pergerakan kamera & filter Kalman teroptimasi)
+3. **OC-SORT** (*Observation-Centric recovery* untuk mengatasi jeda oklusi)
+4. **Deep OC-SORT** (Integrasi modul ekstraksi fitur kenampakan / Re-ID)
 
-Selain file `main.tex`, ada juga beberapa bagian lain dari template ini yang bisa diubah, seperti:
-- **[`konten`](./konten)**, berisi file `*.tex` dari bagian-bagian yang akan dimasukkan pada proposal tugas akhir.
-- **[`pengesahan`](./pengesahan)**, berisi file `*.tex` dari bagian pengesahan untuk proposal tugas akhir.
-- **[`gambar`](./gambar)**, berisi file `*.jpg`, `*.png`, maupun format gambar lain yang akan dimasukkan pada dokumen.
-- **[`pustaka/pustaka.bib`](./pustaka/pustaka.bib)**, berisi daftar referensi yang akan dimasukkan pada dokumen.
+Tujuan utama penelitian ini adalah menguji secara empiris korelasi antara metrik evaluasi pelacakan akademik (**MOTA**, **IDF1**) dengan tingkat presisi metrik bisnis ritel di dunia nyata terhadap data acuan (*ground truth*) rekaman CCTV operasional toko.
 
-> Penjelasan lebih lanjut mengenai penggunaan template ini akan dijelaskan dengan comment yang tersedia pada setiap file yang ada.
+---
 
-## Contoh Penggunaan Template
+## 📂 Struktur Repositori
 
-Berikut adalah daftar repositori lain yang menggunakan template yang berasal dari repositori ini:
-- [threeal/proposal-ta-simulasi-robot](https://github.com/threeal/proposal-ta-simulasi-robot).
-
-## Lisensi
-
-Kode sumber yang ada pada repositori ini dilisensikan di bawah [lisensi MIT](./LICENSE).
+```text
+Proposal_Tugas_Akhir_ITS/
+├── konten/
+│   ├── 1-pendahuluan.tex        # Bab 1: Latar Belakang, Batasan, & Tujuan
+│   ├── 2-tinjauan-pustaka.tex    # Bab 2: Landasan Teori, TbD, MOT, & Research Gap
+│   ├── 3-metodologi.tex          # Bab 3: Diagram Alir, Dataset, Pipeline, & Metrik Evaluasi
+│   ├── 4-lainnya.tex             # Bab Tambahan / Rencana Lanjutan
+│   └── 5-jadwal-penelitian.tex   # Jadwal dan Rencana Kerja Penelitian
+├── pustaka/
+│   ├── pustaka.bib               # Basis data sitasi BibLaTeX / Biber
+│   └── tanda-hubung.tex          # Aturan hyphenation bahasa Indonesia
+├── gambar/                       # Diagram alir, arsitektur sistem, & aset visual
+├── sampul/                       # Halaman judul dan format cover resmi ITS
+├── main.tex                      # File master dokumen proposal LaTeX
+├── .gitignore                    # Berkas filter file sementara (build artifacts)
+└── README.md                     # Dokumentasi repositori

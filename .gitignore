@@ -1,0 +1,22 @@
+# File sementara LaTeX
+*.aux
+*.bcf
+*.blg
+*.bbl
+*.log
+*.lot
+*.lof
+*.out
+*.toc
+*.run.xml
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+
+# Direktori cache VS Code & OS
+.vscode/
+Thumbs.db
+.DS_Store
+
+# (Opsional) Jika tidak ingin mengunggah PDF hasil kompilasi:
+# *.pdf
