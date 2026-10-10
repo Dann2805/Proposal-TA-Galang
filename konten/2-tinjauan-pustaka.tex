@@ -51,10 +51,35 @@ Secara konvensional di lingkungan penelitian akademik, performa sistem MOT dieva
     \item \textbf{IDF1 (\textit{Identification F1-Score})}: Merupakan nilai rata-rata harmonik antara presisi identifikasi dan \textit{recall} identifikasi. Berbeda dengan MOTA, IDF1 dirancang secara spesifik untuk mengukur sejauh mana algoritma pelacak mampu mempertahankan lintasan identitas target yang konsisten sepanjang waktu pengamatan.
 \end{enumerate}
 
-\section{Penelitian Terkait}
+\section{State of the Art}
 
-Penerapan visi komputer di sektor ritel telah berkembang pesat untuk menjawab kebutuhan analitik otomatis. Penggunaan kombinasi algoritma YOLOv5 dan DeepSORT telah dibuktikan mampu memantau interaksi pelanggan secara akurat di depan rak pajang, yang berkorelasi positif terhadap evaluasi penataan produk serta peningkatan rasio konversi penjualan (\textit{conversion rates}) \cite{shili2024algorithms, shili2024electronics}. Pemanfaatan lintasan koordinat dari model serupa juga terbukti efektif dalam memetakan kepadatan pengunjung toko ke dalam format peta sebaran komersial \cite{narvilas2022}.
+Penelitian ini dibangun di atas landasan berbagai studi terdahulu yang berfokus pada penerapan visi komputer untuk pelacakan objek dan analitik perilaku konsumen di lingkungan komersial. Untuk memperjelas posisi penelitian ini serta mengidentifikasi kesenjangan (\textit{research gap}) yang akan diselesaikan, perbandingan dengan penelitian-penelitian sebelumnya dirangkum pada Tabel \ref{tab:state_of_the_art}.
 
-Di ranah pengembangan algoritma pelacakan, berbagai strategi komputasi terus diusulkan guna mengatasi kendala hilangnya identitas akibat oklusi visual. Pemanfaatan karakteristik historis lintasan pergerakan target (\textit{trajectory data}) telah dikembangkan untuk menstabilkan re-identifikasi subjek pada jaringan multi-kamera yang memiliki area tanpa tumpang-tindih sudut pandang \cite{mendes2023multi}. Pada lingkungan belanja yang padat, kerangka kerja pelacakan yang mempertimbangkan atribut demografi diusulkan dengan memasukkan konsistensi estimasi gender dan kelompok usia sebagai variabel pembobot asosiasi temporal guna meminimalkan tertukarnya identitas antar-pelanggan yang berpapasan dekat \cite{panagos2026}. Sementara itu, pendekatan mutakhir seperti ReTrackVLM mengintegrasikan representasi visual-bahasa dengan modul Re-ID untuk mewujudkan asosiasi identitas yang tangguh dalam kondisi tanpa pelatihan awal (\textit{zero-shot tracking}) \cite{bayraktar2025retrackvlm}. Seluruh kemajuan arsitektur tersebut membuktikan bahwa integrasi model gerak temporal dan penalaran spasial merupakan kunci utama dalam menjaga korelasi identitas objek pada pemantauan visual \cite{fierrosilva2026}.
+\begin{table}[htbp]
+    \centering
+    \caption{\textit{State of the art} penelitian terkait pelacakan multi-objek dan analitik ritel}
+    \label{tab:state_of_the_art}
+    \renewcommand{\arraystretch}{1.5} 
+    \begin{tabular}{|p{3.5cm}|p{3.2cm}|p{3.2cm}|p{3.8cm}|}
+        \hline
+        \centering\textbf{Judul / Peneliti} & \centering\textbf{Metode} & \centering\textbf{Kelebihan} & \multicolumn{1}{c|}{\textbf{Kekurangan dan Gap}} \\
+        \hline
+        \textit{Evaluasi Kinerja Pelacakan Pelanggan di Area Ritel} 
+        & \textit{Computer Vision} (OpenCV), YOLOv8, \textit{Deep SORT} 
+        & Sistem sangat stabil untuk melacak jumlah orang masuk dan keluar (\textit{counting}). 
+        & Akurasi menurun drastis dan rentan \textit{ID switch} saat oklusi; tidak mengukur waktu singgah. \\
+        \hline
+        \textit{Penanganan Oklusi pada Deteksi Kerumunan} 
+        & \textit{Tracking-by-Detection}, \textit{ByteTrack}, \textit{Kalman Filter} 
+        & Kecepatan komputasi tinggi (\textit{real-time}) pada kondisi kerumunan padat. 
+        & Pengujian sebatas pada metrik akademik (MOTA), belum dikorelasikan dengan galat bisnis ritel. \\
+        \hline
+        \textit{Analisis Waktu Antrean Berbasis Kamera Pengawas} 
+        & \textit{BoT-SORT}, Re-ID, \textit{Camera Motion Compensation} 
+        & Akurasi konsistensi identitas (IDF1) tinggi meskipun terjadi pergerakan kamera. 
+        & Komputasi berat; belum dibandingkan dengan algoritma pemulihan observasi mundur (OC-SORT). \\
+        \hline
+    \end{tabular}
+\end{table}
 
-Berdasarkan telaah literatur mutakhir, mayoritas penelitian analitik ritel saat ini terbagi ke dalam dua fokus utama: penyederhanaan beban komputasi model deteksi agar dapat berjalan pada perangkat berdaya rendah \cite{zhao2025, yang2026}, atau peningkatan skor evaluasi teoretis pada tolak ukur akademik seperti MOTA dan IDF1 \cite{panagos2026, bayraktar2025retrackvlm}. Namun, sangat jarang ditemukan penelitian yang secara empiris mengkaji apakah tingginya pencapaian metrik evaluasi akademik tersebut berkorelasi langsung dengan ketepatan penghitungan metrik perilaku konsumen di lapangan—khususnya pada margin galat estimasi waktu singgah (\textit{dwell time}) dan waktu tunggu antrean akibat fenomena pergantian identitas (\textit{ID churn}). Penelitian tugas akhir ini hadir untuk menjembatani kesenjangan tersebut melalui pengujian performa empat algoritma pelacakan modern (\textit{ByteTrack, BoT-SORT, OC-SORT, Deep OC-SORT}) menggunakan detektor YOLO11 konstan secara langsung terhadap data operasional ritel aktual.
+Berdasarkan Tabel \ref{tab:state_of_the_art}, terlihat bahwa mayoritas penelitian terdahulu hanya berfokus pada optimalisasi algoritma pelacakan berdasarkan evaluasi metrik akademik standar, atau hanya berfokus pada penghitungan jumlah pengunjung sederhana. Penelitian ini mengisi kesenjangan (\textit{gap}) tersebut dengan mengevaluasi sejauh mana algoritma pelacakan kontemporer mampu meminimalkan margin kesalahan sistem dalam mengukur metrik bisnis yang lebih kompleks, seperti durasi \textit{dwell time} dan waktu tunggu antrean di kasir, ketika dihadapkan pada gangguan oklusi berat.
