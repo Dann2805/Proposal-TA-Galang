@@ -20,9 +20,16 @@ Selama ini, perkembangan literatur di bidang visi komputer dan pelacakan multi-o
 
 Berangkat dari kesenjangan tersebut, penelitian tugas akhir ini diarahkan untuk melakukan evaluasi komparatif secara objektif terhadap performa berbagai algoritma pelacakan multi-objek mutakhir dalam mengukur indikator perilaku konsumen pada skenario ritel fisik. Pengujian difokuskan pada ketahanan algoritma pelacakan dalam mempertahankan keutuhan identitas target di tengah kondisi oklusi yang kerap terjadi di area perbelanjaan. Melalui perbandingan langsung antara hasil keluaran sistem analitik otomatis dengan data observasi manual di lapangan (\textit{ground truth}), penelitian ini bertujuan membuktikan relevansi korelasi antara metrik tolok ukur akademik dengan presisi metrik bisnis ritel, sekaligus mengidentifikasi pendekatan pelacakan yang paling tangguh untuk meminimalkan margin kesalahan penghitungan di lingkungan operasional nyata.
 
+
 \section{Rumusan Masalah}
 
-Berdasarkan latar belakang yang telah dipaparkan, permasalahan utama dalam penelitian ini dirumuskan ke dalam pertanyaan mengenai seberapa akurat metrik perilaku konsumen, yang mencakup durasi waktu singgah (\textit{dwell time}), waktu tunggu antrean, serta estimasi jumlah kunjungan (\textit{counting}), dapat diukur secara andal menggunakan sistem analitik berbasis pelacakan multi-objek pada kondisi lingkungan ritel nyata yang memiliki tingkat kepadatan dan oklusi tinggi. Berangkat dari permasalahan tersebut, penelitian ini berupaya mengidentifikasi algoritma pelacakan manakah di antara metode kontemporer yang mampu menghasilkan tingkat galat metrik perilaku terkecil bila dibandingkan dengan data aktual di lapangan maupun platform analitik komersial siap pakai. Selain itu, penelitian ini juga mengkaji sejauh mana korelasi empiris antara capaian metrik evaluasi pelacakan standar akademik, seperti MOTA dan IDF1, dengan tingkat presisi pengukuran metrik perilaku konsumen di sektor industri komersial.
+Berdasarkan latar belakang yang telah dipaparkan, rumusan masalah dalam penelitian tugas akhir ini adalah sebagai berikut:
+
+\begin{enumerate}
+    \item Bagaimana tingkat akurasi pengukuran metrik perilaku konsumen, yang mencakup durasi waktu singgah (\textit{dwell time}), waktu tunggu antrean, dan estimasi jumlah pengunjung (\textit{counting}), menggunakan sistem analitik berbasis \textit{Multi-Object Tracking} pada kondisi lingkungan ritel nyata dengan tingkat kepadatan dan oklusi tinggi?
+    \item Algoritma pelacakan manakah di antara metode kontemporer (ByteTrack, BoT-SORT, OC-SORT, dan Deep OC-SORT) yang menghasilkan tingkat galat metrik perilaku konsumen terkecil bila dibandingkan dengan data aktual di lapangan (\textit{ground truth}) maupun platform analitik video komersial?
+    \item Bagaimana derajat korelasi empiris antara capaian metrik evaluasi pelacakan standar akademik (seperti MOTA dan IDF1) dengan tingkat presisi pengukuran metrik perilaku konsumen di sektor komersial dunia nyata?
+\end{enumerate}
 
 \section{Batasan Masalah atau Ruang Lingkup}
 
@@ -39,7 +46,13 @@ Batasan masalah dalam penelitian tugas akhir ini ditetapkan sebagai berikut:
 
 \section{Tujuan}
 
-Sejalan dengan rumusan masalah yang diajukan, tujuan dari penelitian tugas akhir ini adalah untuk mengukur secara kuantitatif tingkat akurasi penghitungan metrik perilaku konsumen, khususnya durasi \textit{dwell time}, waktu antre, dan akumulasi jumlah pengunjung, yang diproses oleh sistem analitik berbasis pelacakan multi-objek di bawah pengaruh gangguan oklusi pada area ritel. Lebih lanjut, penelitian ini bertujuan untuk mengevaluasi dan menetapkan algoritma pelacakan multi-objek yang memberikan nilai galat terendah terhadap pengamatan manual di lapangan serta membandingkannya secara objektif dengan performa platform analitik video komersial. Pada akhirnya, penelitian ini bermaksud menganalisis derajat korelasi antara capaian metrik pelacakan standar akademik dengan tingkat validitas data analitik perilaku konsumen di dunia nyata guna membuktikan relevansi tolok ukur teoritis terhadap kebutuhan praktis industri.
+Sejalan dengan rumusan masalah yang diajukan, tujuan dari pelaksanaan penelitian tugas akhir ini adalah sebagai berikut:
+
+\begin{enumerate}
+    \item Mengukur secara kuantitatif tingkat akurasi penghitungan metrik perilaku konsumen (durasi \textit{dwell time}, waktu tunggu antrean, dan estimasi jumlah pengunjung) yang diproses oleh sistem analitik berbasis \textit{Multi-Object Tracking} di bawah pengaruh gangguan oklusi pada area ritel.
+    \item Mengevaluasi dan menentukan algoritma pelacakan multi-objek kontemporer yang menghasilkan nilai galat terendah terhadap pengamatan manual di lapangan (\textit{ground truth}) serta membandingkannya secara objektif dengan performa platform analitik video komersial.
+    \item Menganalisis derajat korelasi empiris antara capaian metrik evaluasi pelacakan standar akademik (MOTA dan IDF1) dengan tingkat validitas data analitik perilaku konsumen di lapangan guna membuktikan relevansi tolok ukur teoretis terhadap kebutuhan praktis industri.
+\end{enumerate}
 
 \section{Manfaat}
 
