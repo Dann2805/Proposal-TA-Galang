@@ -1,41 +1,85 @@
-\chapter[METODOLOGI PENELITIAN]{METODOLOGI PENELITIAN}
+\chapter[METODOLOGI]{METODOLOGI}
+\pagenumbering{arabic}
 \sloppy
 
-Metodologi penelitian ini memaparkan tahapan sistematis yang dilakukan untuk mengevaluasi kinerja algoritma pelacakan multi-objek (\textit{Multi-Object Tracking}) dalam mengukur metrik perilaku konsumen pada lingkungan komersial beroklusi, serta menguji korelasi antara metrik standar akademik dan margin galat analitik bisnis di dunia nyata.
+Bab ini menguraikan tahapan-tahapan penelitian yang dilakukan untuk menjawab rumusan masalah. Pembahasan mencakup alur penelitian, pengumpulan dan persiapan data, perancangan arsitektur sistem pelacakan, metode ekstraksi perilaku konsumen, hingga skenario pengujian dan metrik evaluasi yang digunakan.
 
 \section{Diagram Alir Penelitian}
 
-Tahapan pelaksanaan penelitian dirancang secara terstruktur dan disajikan pada Gambar~\ref{fig:diagram_alir}.
+Diagram alir penelitian merupakan tahapan fundamental yang memetakan langkah-langkah sistematis dari awal hingga akhir penelitian. Secara umum, alur kerja dibagi menjadi persiapan data, konfigurasi sistem, eksekusi pengujian, dan analisis korelasi. Diagram alir penelitian ini dapat dilihat pada Gambar \ref{fig:diagram_alir}.
 
-\begin{figure}[htbp]
+\begin{figure}[h!] % [h!] memaksa gambar ditaruh tepat di sini
     \centering
-    \includegraphics[width=0.75\textwidth, height=0.75\textheight, keepaspectratio]{gambar/diagramalir.png}
+    % Tinggi gambar dibatasi 55% agar muat di bawah judul Bab 3 pada halaman 1
+    \includegraphics[width=0.85\textwidth, height=0.55\textheight, keepaspectratio]{gambar/diagramalir.png}
     \caption{Diagram Alir Penelitian}
     \label{fig:diagram_alir}
 \end{figure}
 
-Berdasarkan diagram alir pada Gambar~\ref{fig:diagram_alir}, tahapan penelitian diuraikan sebagai berikut:
+Berdasarkan Gambar \ref{fig:diagram_alir}, tahapan penelitian ini dapat dijelaskan secara rinci sebagai berikut:
 
 \begin{enumerate}
-    \item \textbf{Identifikasi Masalah}: Mengidentifikasi tantangan oklusi visual dan fenomena fragmentasi identitas (\textit{ID churn}) pada analitik video ritel komersial, serta merumuskan batasan masalah dan tujuan penelitian.
-    \item \textbf{Studi Literatur}: Mengkaji landasan teoretis mengenai paradigma \textit{Tracking-by-Detection}, arsitektur YOLO11, algoritma pelacakan kontemporer (ByteTrack, BoT-SORT, OC-SORT, Deep OC-SORT), metrik evaluasi akademik (MOTA, IDF1), serta logika penghitungan metrik perilaku ritel.
-    \item \textbf{Persiapan Data dan Ground Truth (Jalur Kiri)}: Mengumpulkan rekaman video CCTV dari dua lokasi area komersial pada jam sibuk, melakukan prapemrosesan dan anonimisasi data, serta menyusun anotasi manual (\textit{ground truth}) untuk lintasan objek dan waktu kejadian riil.
-    \item \textbf{Persiapan Model dan Sistem (Jalur Kanan)}: Mengonfigurasi arsitektur pendeteksi objek YOLO11 sebagai variabel kontrol, menyiapkan modul inferensi untuk keempat algoritma pelacakan, serta menyiapkan akses terhadap platform analitik video komersial siap pakai sebagai pembanding industri.
-    \item \textbf{Integrasi Pipeline dan Ekstraksi Metrik}: Mengintegrasikan modul deteksi, modul pelacakan, dan algoritma komputasi metrik perilaku (\textit{counting}, \textit{dwell time}, dan waktu antre) ke dalam satu alur pemrosesan data.
-    \item \textbf{Eksekusi Pengujian Komparatif}: Menjalankan inferensi eksperimental terhadap rekaman video uji menggunakan keempat konfigurasi algoritma pelacakan serta memproses video yang sama melalui platform analitik komersial.
-    \item \textbf{Evaluasi dan Analisis Korelasi Statistik}: Menghitung skor metrik pelacakan akademik (MOTA, IDF1, \textit{ID switches}), menghitung galat metrik perilaku terhadap data acuan manual (\textit{ground truth}), serta melakukan uji korelasi statistik antara keduanya.
-    \item \textbf{Pembahasan dan Kesimpulan}: Menganalisis ketahanan masing-masing algoritma terhadap gangguan oklusi, menyimpulkan relevansi metrik akademik terhadap akurasi bisnis, dan menyusun laporan tugas akhir.
+    \item \textbf{Identifikasi Masalah dan Studi Literatur}: Tahap awal untuk merumuskan batasan masalah dan mengkaji literatur terkait algoritma \textit{Tracking-by-Detection}, arsitektur YOLO11, serta formula metrik bisnis ritel.
+    \item \textbf{Pengumpulan dan Persiapan Data}: Proses perekaman video dari lingkungan ritel nyata serta pembuatan data acuan (\textit{ground truth}) secara manual untuk indikator \textit{dwell time}, antrean, dan \textit{counting}.
+    \item \textbf{Persiapan Komponen Sistem}: Tahap mengonfigurasi variabel kontrol berupa model detektor YOLO11 dan variabel independen yang terdiri dari empat algoritma MOT (ByteTrack, BoT-SORT, OC-SORT, Deep OC-SORT).
+    \item \textbf{Integrasi \textit{Pipeline}}: Menyatukan modul pendeteksi, modul pelacak, dan skrip logika ekstraksi metrik konsumen ke dalam satu alur pemrosesan yang utuh.
+    \item \textbf{Eksekusi Pengujian Komparatif}: Menjalankan sistem yang telah dibangun pada dataset video dan membandingkan hasil keluarannya dengan platform analitik video komersial.
+    \item \textbf{Evaluasi dan Analisis Korelasi}: Menghitung nilai metrik akademik (MOTA, IDF1), menghitung tingkat galat nyata di lapangan (MAE, MAPE), lalu menguji korelasi statistik di antara keduanya.
 \end{enumerate}
 
-\section{Pengumpulan Data dan Lingkungan Eksperimen}
+\section{Pengumpulan dan Persiapan Data}
 
-Kualitas evaluasi empiris sangat bergantung pada representasi data uji terhadap kondisi dinamis di lapangan serta standarisasi lingkungan komputasi yang digunakan.
+Tahap ini bertujuan untuk memperoleh data visual yang merepresentasikan kondisi operasional ritel komersial secara nyata, yang nantinya digunakan sebagai input sistem sekaligus dasar validasi pengujian.
 
-\subsection{Karakteristik Data Video Uji}
-Data video yang digunakan dalam penelitian ini merupakan rekaman kamera pengawas (CCTV) yang diambil dari dua lokasi area komersial fisik yang berbeda (sektor ritel modern dan gerai F\&B). Pemilihan lokasi didasarkan pada variasi tata letak ruang, intensitas pergerakan pelanggan, serta tingkat kerapatan oklusi visual. Karakteristik dataset uji ditetapkan sebagai berikut:
+\subsection{Sumber dan Karakteristik Data}
+Data diperoleh secara langsung melalui perekaman sistem kamera pengawas (CCTV) di dua lokasi area komersial ritel. Untuk mendapatkan tingkat kepadatan dan tantangan oklusi yang representatif, pengambilan data dilakukan pada jam operasional sibuk (\textit{rush hour}). Durasi setiap sampel video dibatasi antara 10 hingga 15 menit. Pengambilan data mempertimbangkan beberapa variasi kondisi, meliputi perbedaan tata letak etalase, variasi pencahayaan ruangan, tingkat kepadatan antrean, serta sudut pandang elevasi kamera (\textit{oblique angle}). Seluruh proses perekaman dilakukan secara anonim tanpa melibatkan modul ekstraksi fitur wajah demi mematuhi etika privasi.
+
+\subsection{Pembuatan Data Acuan (\textit{Ground Truth})}
+Video mentah yang telah dikumpulkan kemudian dianotasi secara manual untuk membentuk data acuan (\textit{ground truth}). Anotasi dilakukan dengan mencatat stempel waktu (\textit{timestamp}) aktual pada level bingkai (\textit{frame-level}) untuk mendata tiga parameter utama: (1) total volume pengunjung yang melewati garis virtual kasir, (2) durasi waktu singgah riil per individu di area etalase, dan (3) durasi waktu antre per individu. Data acuan ini menjadi standar emas absolut untuk mengukur margin galat sistem pelacakan otomatis nantinya.
+
+\section{Arsitektur Sistem \textit{Tracking-by-Detection}}
+
+Sistem pelacakan pada penelitian ini dirancang menggunakan paradigma \textit{Tracking-by-Detection} (TbD). Alur pemrosesan data divisualisasikan pada Gambar \ref{fig:pipeline_tbd}.
+
+% Pastikan gambar pipeline-tbd.png sudah ada di folder gambar/
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{gambar/Alur Pemrosesan.png}
+    \caption{Diagram Perangkat Lunak dan Alur Paradigma \textit{Tracking-by-Detection}}
+    \label{fig:pipeline_tbd}
+\end{figure}
+
+Alur kerja arsitektur sistem pada Gambar \ref{fig:Alur Pemrosesan} diuraikan sebagai berikut:
 \begin{enumerate}
-    \item \textbf{Durasi dan Periode Perekaman}: Rekaman video diambil sepanjang 10--15 menit pada jam operasional sibuk (\textit{rush hour}), di mana interaksi antar-pelanggan dan penumpukan antrean mencapai intensitas tertinggi.
-    \item \textbf{Sudut Pandang Kamera}: Kamera dipasang pada posisi elevasi sudut miring (\textit{elevated oblique view}) khas penempatan CCTV komersial, yang mencakup area etalase rak produk dan area antrean kasir.
-    \item \textbf{Spesifikasi Teknis Video}: Video direkam pada resolusi standar \textit{High Definition} (1080p) dengan kecepatan bingkai 25 hingga 30 bingkai per detik (\textit{frames per second} / FPS).
-    \item \textbf{Privasi dan Anonimisasi Data}: Demi menjaga privasi pengunjung, seluruh data video diproses secara anonim tanpa penerapan teknologi pengenalan biometrik wajah (\textit{facial recognition}). Analisis pergerakan murni didasarkan pada lokalisasi kotak pembatas tubuh manusia (kelas \textit{person}).
+    \item Sistem menerima input berupa bingkai (\textit{frame}) video ritel secara sekuensial.
+    \item Setiap bingkai diproses oleh model detektor YOLO11 untuk melokalisasi target manusia dan menghasilkan koordinat kotak pembatas (\textit{bounding boxes}).
+    \item Sekumpulan kotak pembatas mentah tersebut diteruskan ke modul algoritma pelacak (salah satu dari ByteTrack, BoT-SORT, OC-SORT, atau Deep OC-SORT).
+    \item Algoritma pelacak melakukan asosiasi data antar-bingkai menggunakan matriks jarak (\textit{Intersection over Union} / IoU) dan/atau filter Kalman untuk menautkan deteksi pada bingkai saat ini dengan riwayat jejak (\textit{tracklets}) sebelumnya.
+    \item Sistem mengeluarkan output final berupa kotak pembatas yang telah dilengkapi dengan nomor identitas (ID) unik dan konsisten untuk setiap pengunjung.
 \end{enumerate}
+
+\section{Ekstraksi Metrik Perilaku Konsumen}
+
+Hasil keluaran berupa koordinat target beserta ID unik dari sistem MOT tidak dapat langsung dibaca sebagai metrik bisnis. Oleh karena itu, diperlukan modul logika tambahan untuk mengekstraksinya:
+\begin{itemize}
+    \item \textbf{Penghitungan Pengunjung (\textit{People Counting}):} Dihitung berdasarkan logika persilangan garis virtual (\textit{tripwire}). Jika titik tengah koordinat kaki target dengan ID tertentu memotong garis dari arah A ke B, maka sistem akan menambahkan hitungan masuk.
+    \item \textbf{Waktu Singgah (\textit{Dwell Time}):} Dihitung dengan mendefinisikan poligon area ketertarikan (\textit{Region of Interest} / ROI) pada etalase. Sistem merekam waktu (\textit{frame}) saat ID tertentu masuk ke dalam poligon ($t_{\text{masuk}}$) dan waktu saat ID tersebut keluar ($t_{\text{keluar}}$). Durasi dikonversi ke detik berdasarkan \textit{frame rate} video.
+    \item \textbf{Waktu Antre (\textit{Queue Time}):} Dihitung dari akumulasi waktu saat suatu ID berada di dalam poligon area kasir dengan kondisi perpindahan koordinat piksel yang sangat lambat di bawah ambang batas kecepatan tertentu (\textit{statis}).
+\end{itemize}
+
+\section{Pengujian dan Evaluasi Sistem}
+
+Pengujian dan evaluasi dilakukan untuk mengukur kinerja sistem secara komprehensif, mulai dari keandalan pelacakan di tingkat piksel hingga akurasi data bisnis.
+
+\subsection{Pengujian Kinerja Pelacakan Akademik}
+Pengujian ini bertujuan untuk mengukur ketangguhan algoritma dalam menjaga konsistensi identitas target di bawah tekanan oklusi visual. Parameter yang digunakan bertumpu pada metrik CLEAR MOT, khususnya:
+\begin{itemize}
+    \item \textbf{\textit{Multi-Object Tracking Accuracy} (MOTA):} Menilai tingkat kesalahan deteksi (positif palsu, negatif palsu) dan perpindahan identitas (\textit{ID switches}).
+    \item \textbf{\textit{Identification F1-Score} (IDF1):} Mengukur seberapa lama algoritma mampu mempertahankan satu ID yang sama pada target yang benar secara berkesinambungan.
+    \end{itemize}
+
+\subsection{Pengujian Tingkat Galat Metrik Bisnis Terpadu}
+Pengujian ini mengevaluasi kinerja sistem setelah modul ekstraksi perilaku diintegrasikan. Output sistem dibandingkan secara langsung dengan \textit{ground truth} manual untuk mengukur penyimpangan (\textit{error}) di dunia nyata. Metrik galat yang diukur meliputi \textit{Mean Absolute Error} (MAE) untuk deviasi durasi \textit{dwell time} dan antrean (dalam satuan detik), serta \textit{Mean Absolute Percentage Error} (MAPE) untuk persentase galat pada penghitungan jumlah orang.
+
+\subsection{Analisis Korelasi Statistik}
+Tahap evaluasi akhir dilakukan dengan menganalisis hasil pengujian menggunakan uji korelasi statistik (Pearson atau Spearman). Analisis ini digunakan untuk mengetahui derajat hubungan empiris antara tingginya skor metrik akademik (MOTA/IDF1) dengan rendahnya nilai galat (MAE/MAPE) pada metrik perilaku konsumen di lapangan. Hasil evaluasi ini akan menjadi dasar identifikasi keterbatasan sistem serta penarikan kesimpulan penelitian.
