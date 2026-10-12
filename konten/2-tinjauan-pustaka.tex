@@ -78,6 +78,10 @@ Secara konvensional di lingkungan penelitian akademik, performa sistem MOT dieva
 
 Penelitian ini dibangun di atas landasan berbagai studi terdahulu yang berfokus pada penerapan visi komputer untuk pelacakan objek dan analitik perilaku konsumen di lingkungan komersial. Untuk memperjelas posisi penelitian ini serta mengidentifikasi kesenjangan (\textit{research gap}) yang akan diselesaikan, perbandingan dengan penelitian-penelitian sebelumnya dirangkum pada Tabel \ref{tab:state_of_the_art}.
 
+\subsection{State of the Art}
+
+Penelitian ini dibangun di atas landasan berbagai studi terdahulu yang berfokus pada penerapan visi komputer untuk pelacakan objek dan analitik perilaku konsumen di lingkungan komersial. Untuk memperjelas posisi penelitian ini serta mengidentifikasi kesenjangan (\textit{research gap}) yang akan diselesaikan, perbandingan dengan penelitian-penelitian sebelumnya dirangkum pada Tabel \ref{tab:state_of_the_art}.
+
 \begin{table}[htbp]
     \centering
     \caption{\textit{State of the art} penelitian terkait pelacakan multi-objek dan analitik ritel}
@@ -87,22 +91,24 @@ Penelitian ini dibangun di atas landasan berbagai studi terdahulu yang berfokus 
         \hline
         \centering\textbf{Judul / Peneliti} & \centering\textbf{Metode} & \centering\textbf{Kelebihan} & \multicolumn{1}{c|}{\textbf{Kekurangan dan Gap}} \\
         \hline
-        \textit{Evaluasi Kinerja Pelacakan Pelanggan di Area Ritel} 
-        & \textit{Computer Vision} (OpenCV), YOLOv8, \textit{Deep SORT} 
-        & Sistem sangat stabil untuk melacak jumlah orang masuk dan keluar (\textit{counting}). 
-        & Akurasi menurun drastis dan rentan \textit{ID switch} saat oklusi; tidak mengukur waktu singgah. \\
+        \textit{Advanced Customer Behavior Tracking and Heatmap Analysis with YOLOv5 and DeepSORT in Retail Environment} (Shili et al., 2024)
+        & YOLOv5, \textit{DeepSORT}, Analisis \textit{Heatmap} 
+        & Efektif memetakan pola pergerakan konsumen dan tingkat keterlibatan di berbagai zona ritel. 
+        & Menggunakan arsitektur pelacak generasi lama yang rentan terhadap oklusi berat; belum mengevaluasi metrik galat durasi waktu antre secara spesifik. \\
         \hline
-        \textit{Penanganan Oklusi pada Deteksi Kerumunan} 
-        & \textit{Tracking-by-Detection}, \textit{ByteTrack}, \textit{Kalman Filter} 
-        & Kecepatan komputasi tinggi (\textit{real-time}) pada kondisi kerumunan padat. 
-        & Pengujian sebatas pada metrik akademik (MOTA), belum dikorelasikan dengan galat bisnis ritel. \\
+        \textit{Demographic-Aware Multi-Object Tracking for Retail Environments} (Panagos et al., 2026) 
+        & \textit{Tracking-by-Detection}, ReID, Prediksi Demografi, LSTM 
+        & Mengurangi \textit{ID switches} secara signifikan pada rekaman data ritel dengan kerumunan padat. 
+        & Evaluasi masih terbatas pada metrik akademik (MOTA, IDF1); belum dikorelasikan dengan tingkat galat durasi waktu antrean di kasir. \\
         \hline
-        \textit{Analisis Waktu Antrean Berbasis Kamera Pengawas} 
-        & \textit{BoT-SORT}, Re-ID, \textit{Camera Motion Compensation} 
-        & Akurasi konsistensi identitas (IDF1) tinggi meskipun terjadi pergerakan kamera. 
-        & Komputasi berat; belum dibandingkan dengan algoritma pemulihan observasi mundur (OC-SORT). \\
+        \textit{Tinjauan Sistematis Visi Komputer Multi-Kamera di Area Ritel} (Fierro-Silva et al., 2026) 
+        & Komparasi arsitektur multi-kamera dan \textit{Deep Learning} 
+        & Mampu memperluas area pemantauan pelanggan di seluruh zona toko tanpa titik buta. 
+        & Komputasi sangat berat untuk diterapkan pada \textit{real-time deployment}; rentan kehilangan jejak (\textit{identity churn}) saat oklusi antar-kamera. \\
         \hline
     \end{tabular}
 \end{table}
+
+Berdasarkan Tabel \ref{tab:state_of_the_art}, terlihat bahwa mayoritas penelitian terdahulu telah berhasil mengoptimalkan algoritma pelacakan berdasarkan evaluasi metrik akademik (MOTA, IDF1) maupun pemetaan perilaku dasar. Namun, terdapat kesenjangan (\textit{gap}) empiris: tingginya skor akurasi pelacakan di laboratorium belum tentu mencerminkan rendahnya tingkat margin kesalahan (\textit{error rate}) dalam menghitung metrik bisnis yang lebih kompleks (seperti \textit{dwell time} dan waktu antre) saat berhadapan dengan oklusi berat. Penelitian ini hadir untuk mengisi kesenjangan tersebut melalui evaluasi komparatif algoritma MOT kontemporer yang diuji langsung pada skenario operasional ritel nyata.
 
 Berdasarkan Tabel \ref{tab:state_of_the_art}, terlihat bahwa mayoritas penelitian terdahulu hanya berfokus pada optimalisasi algoritma pelacakan berdasarkan evaluasi metrik akademik standar, atau hanya berfokus pada penghitungan jumlah pengunjung sederhana. Penelitian ini mengisi kesenjangan (\textit{gap}) tersebut dengan mengevaluasi sejauh mana algoritma pelacakan kontemporer mampu meminimalkan margin kesalahan sistem dalam mengukur metrik bisnis yang lebih kompleks, seperti durasi \textit{dwell time} dan waktu tunggu antrean di kasir, ketika dihadapkan pada gangguan oklusi berat.

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.10.8)  12 OCT 2026 08:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.10.8)  12 OCT 2026 13:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1002,7 +1002,7 @@ LaTeX Font Info:    Font shape `OT1/txss/b/sl' will be
 LaTeX Font Info:    Font shape `OT1/txss/m/n' will be
 (Font)              scaled to size 13.67995pt on input line 20.
 )
-<sampul/gambar/sampul-luar-tipis.png, id=147, 2107.875pt x 2981.1375pt>
+<sampul/gambar/sampul-luar-tipis.png, id=151, 2107.875pt x 2981.1375pt>
 File: sampul/gambar/sampul-luar-tipis.png Graphic file (type png)
 <use sampul/gambar/sampul-luar-tipis.png>
 Package pdftex.def Info: sampul/gambar/sampul-luar-tipis.png  used on input line 38.
@@ -1077,7 +1077,7 @@ Underfull \hbox (badness 1057) in paragraph at lines 53--54
 
 [3]) [4] (konten/2-tinjauan-pustaka.tex
 Chapter 2.
-<gambar/yolo11.png, id=322, 1163.34625pt x 666.49pt>
+<gambar/yolo11.png, id=327, 1163.34625pt x 666.49pt>
 File: gambar/yolo11.png Graphic file (type png)
 <use gambar/yolo11.png>
 Package pdftex.def Info: gambar/yolo11.png  used on input line 25.
@@ -1091,161 +1091,224 @@ Underfull \hbox (badness 1400) in paragraph at lines 41--42
  []
 
 [6 <./gambar/yolo11.png>]
-<gambar/Alur Pemrosesan.png, id=341, 642.14906pt x 255.95625pt>
+<gambar/Alur Pemrosesan.png, id=346, 642.14906pt x 255.95625pt>
 File: gambar/Alur Pemrosesan.png Graphic file (type png)
 <use gambar/Alur Pemrosesan.png>
 Package pdftex.def Info: gambar/Alur Pemrosesan.png  used on input line 48.
 (pdftex.def)             Requested size: 364.19667pt x 145.17014pt.
  [7 <./gambar/Alur Pemrosesan.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 90--91
-[]|\OT1/txr/m/it/12 Evaluasi Kin-erja
+Underfull \hbox (badness 10000) in paragraph at lines 94--95
+\OT1/txr/m/it/12 Be-hav-ior Track-ing
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 90--91
-\OT1/txr/m/it/12 Pela-cakan Pelang-
+Underfull \hbox (badness 4792) in paragraph at lines 94--95
+\OT1/txr/m/it/12 y-sis with YOLOv5
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 91--92
-[]|\OT1/txr/m/it/12 Computer Vi-
+Underfull \hbox (badness 3954) in paragraph at lines 94--95
+\OT1/txr/m/it/12 and Deep-SORT in
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 91--92
-\OT1/txr/m/it/12 sion \OT1/txr/m/n/12 (OpenCV),
+Underfull \hbox (badness 5726) in paragraph at lines 94--95
+\OT1/txr/m/it/12 Re-tail En-vi-ron-ment
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 91--92
-\OT1/txr/m/n/12 YOLOv8, \OT1/txr/m/it/12 Deep
+Underfull \hbox (badness 10000) in paragraph at lines 95--96
+[]|\OT1/txr/m/n/12 YOLOv5, \OT1/txr/m/it/12 Deep-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 92--93
-[]|\OT1/txr/m/n/12 Sistem san-gat
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 93--94
-[]|\OT1/txr/m/n/12 Akurasi menu-run
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 93--94
-\OT1/txr/m/it/12 switch \OT1/txr/m/n/12 saat ok-lusi;
- []
-
-
-Underfull \hbox (badness 2932) in paragraph at lines 95--96
-[]|\OT1/txr/m/it/12 Penanganan Ok-lusi
+Underfull \hbox (badness 10000) in paragraph at lines 95--96
+\OT1/txr/m/it/12 SORT\OT1/txr/m/n/12 , Anal-i-sis
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 96--97
+\OT1/txr/m/n/12 pola perg-er-akan
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 96--97
+\OT1/txr/m/n/12 kon-sumen dan
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 96--97
+\OT1/txr/m/n/12 tingkat keter-li-
+ []
+
+
+Underfull \hbox (badness 1297) in paragraph at lines 96--97
+\OT1/txr/m/n/12 batan di berba-gai
+ []
+
+
+Underfull \hbox (badness 3838) in paragraph at lines 97--98
+\OT1/txr/m/n/12 tur pela-cak gen-erasi
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 97--98
+\OT1/txr/m/n/12 lama yang rentan
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 97--98
+\OT1/txr/m/n/12 belum mengeval-u-asi
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 97--98
+\OT1/txr/m/n/12 metrik galat durasi
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 97--98
+\OT1/txr/m/n/12 waktu antre se-cara
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--100
+[]|\OT1/txr/m/it/12 Demographic-
+ []
+
+
+Underfull \hbox (badness 1424) in paragraph at lines 99--100
+\OT1/txr/m/it/12 Aware Multi-Object
+ []
+
+
+Underfull \hbox (badness 1389) in paragraph at lines 99--100
+\OT1/txr/m/it/12 Track-ing for Re-tail
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 100--101
 []|\OT1/txr/m/it/12 Tracking-by-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 96--97
-\OT1/txr/m/it/12 Detection\OT1/txr/m/n/12 , \OT1/txr/m/it/12 Byte-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 96--97
-\OT1/txr/m/it/12 Track\OT1/txr/m/n/12 , \OT1/txr/m/it/12 Kalman
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 97--98
-[]|\OT1/txr/m/n/12 Kecepatan kom-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 97--98
-\OT1/txr/m/n/12 putasi tinggi
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 97--98
-\OT1/txr/m/n/12 (\OT1/txr/m/it/12 real-time\OT1/txr/m/n/12 ) pada
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 97--98
-\OT1/txr/m/n/12 kon-disi keru-mu-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 98--99
-[]|\OT1/txr/m/n/12 Pengujian se-batas
+Underfull \hbox (badness 7273) in paragraph at lines 100--101
+\OT1/txr/m/it/12 Detection\OT1/txr/m/n/12 , ReID,
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 100--101
-[]|\OT1/txr/m/it/12 Analisis Waktu
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 100--101
-\OT1/txr/m/it/12 Antrean Berba-sis
+\OT1/txr/m/n/12 Prediksi De-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 101--102
-\OT1/txr/m/it/12 Cam-era Mo-tion
+[]|\OT1/txr/m/n/12 Mengurangi \OT1/txr/m/it/12 ID
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 101--102
+\OT1/txr/m/it/12 switches \OT1/txr/m/n/12 se-cara
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 101--102
+\OT1/txr/m/n/12 sig-nifikan pada
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 102--103
-[]|\OT1/txr/m/n/12 Akurasi kon-sis-
+[]|\OT1/txr/m/n/12 Evaluasi masih ter-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 102--103
-\OT1/txr/m/n/12 tensi iden-ti-tas
+\OT1/txr/m/n/12 batas pada metrik
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 102--103
-\OT1/txr/m/n/12 (IDF1) tinggi
+\OT1/txr/m/n/12 akademik (MOTA,
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 102--103
-\OT1/txr/m/n/12 meskipun ter-jadi
+\OT1/txr/m/n/12 galat durasi waktu
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 102--103
-\OT1/txr/m/n/12 perg-er-akan kam-
+Underfull \hbox (badness 10000) in paragraph at lines 104--105
+[]|\OT1/txr/m/it/12 Tinjauan Sis-tem-a-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 103--104
-[]|\OT1/txr/m/n/12 Komputasi be-rat;
+Underfull \hbox (badness 10000) in paragraph at lines 104--105
+\OT1/txr/m/it/12 tis Visi Kom-puter
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 103--104
-\OT1/txr/m/n/12 belum diband-ingkan
+Underfull \hbox (badness 10000) in paragraph at lines 104--105
+\OT1/txr/m/it/12 Multi-Kamera di
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 103--104
-\OT1/txr/m/n/12 den-gan al-go-ritma
+Underfull \hbox (badness 2617) in paragraph at lines 104--105
+\OT1/txr/m/it/12 Area Ri-tel \OT1/txr/m/n/12 (Fierro-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 103--104
-\OT1/txr/m/n/12 pemuli-han ob-ser-vasi
+Underfull \hbox (badness 10000) in paragraph at lines 105--106
+\OT1/txr/m/n/12 tur multi-kamera
  []
 
-) [8] [9] [10
 
-] (konten/3-metodologi.tex
+Underfull \hbox (badness 1975) in paragraph at lines 105--106
+\OT1/txr/m/n/12 dan \OT1/txr/m/it/12 Deep Learn-
+ []
+
+
+Underfull \hbox (badness 7631) in paragraph at lines 106--107
+[]|\OT1/txr/m/n/12 Mampu mem-per-
+ []
+
+
+Underfull \hbox (badness 1983) in paragraph at lines 106--107
+\OT1/txr/m/n/12 luas area pe-man-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 107--108
+[]|\OT1/txr/m/n/12 Komputasi san-gat
+ []
+
+
+Underfull \hbox (badness 5231) in paragraph at lines 107--108
+\OT1/txr/m/n/12 be-rat un-tuk dit-er-ap-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 107--108
+\OT1/txr/m/n/12 kan pada \OT1/txr/m/it/12 real-time
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 107--108
+\OT1/txr/m/it/12 de-ploy-ment\OT1/txr/m/n/12 ; rentan
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 107--108
+\OT1/txr/m/n/12 ke-hi-lan-gan je-jak
+ []
+
+
+Underfull \hbox (badness 3386) in paragraph at lines 107--108
+\OT1/txr/m/n/12 (\OT1/txr/m/it/12 iden-tity churn\OT1/txr/m/n/12 ) saat
+ []
+
+[8] [9]) [10] (konten/3-metodologi.tex
 Chapter 3.
-<gambar/diagramalir.png, id=373, 353.82187pt x 462.22687pt>
+<gambar/diagramalir.png, id=380, 353.82187pt x 462.22687pt>
 File: gambar/diagramalir.png Graphic file (type png)
 <use gambar/diagramalir.png>
 Package pdftex.def Info: gambar/diagramalir.png  used on input line 14.
@@ -1261,6 +1324,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has b
                    \relax 
 l.23     \item \textbf
                       {Pengumpulan dan Persiapan Data}: Proses perekaman vid... [1
+
 
  <./gambar/diagramalir.png>]
 File: gambar/Alur Pemrosesan.png Graphic file (type png)
@@ -1343,23 +1407,23 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 048AC6C5EB7AF046589BD8C9AA4483CD;7350.
+(rerunfilecheck)             Checksum: EF99C42A5F53544FD9492E7083AFF4A2;7534.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 23058 strings out of 467871
- 401710 string characters out of 5418376
- 1324232 words of memory out of 5000000
- 51452 multiletter control sequences out of 15000+600000
+ 23060 strings out of 467871
+ 401744 string characters out of 5418376
+ 1324235 words of memory out of 5000000
+ 51453 multiletter control sequences out of 15000+600000
  669745 words of font info for 126 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  75i,12n,83p,1386b,1213s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/danen/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/rtcxr.pfb><C:/Users/danen/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/rtxb.pfb><C:/Users/danen/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/rtxi.pfb><C:/Users/danen/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/rtxr.pfb><C:/Users/danen/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/danen/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/danen/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/danen/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/danen/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/danen/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/danen/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (33 pages, 564573 bytes).
+Output written on main.pdf (33 pages, 566656 bytes).
 PDF statistics:
- 493 PDF objects out of 1000 (max. 8388607)
- 114 named destinations out of 1000 (max. 500000)
- 309 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 501 PDF objects out of 1000 (max. 8388607)
+ 115 named destinations out of 1000 (max. 500000)
+ 317 words of extra memory for PDF output out of 10000 (max. 10000000)
 
