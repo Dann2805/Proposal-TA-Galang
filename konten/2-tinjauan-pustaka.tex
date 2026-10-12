@@ -13,6 +13,29 @@ Algoritma \textit{You Only Look Once} (YOLO) merupakan arsitektur mutakhir dalam
 
 Optimalisasi model YOLO pada sektor ritel telah banyak dieksplorasi, salah satunya melalui pengembangan arsitektur LSR-YOLO yang dirancang ringan namun tetap memiliki presisi tinggi dalam mengenali produk di rak toko \cite{zhao2025}. Modifikasi serupa diterapkan pada varian YOLO teroptimasi untuk mengenali produk ritel berukuran kecil (\textit{small objects}) pada kabinet pajang dengan kondisi pencahayaan minim (\textit{low-light}) \cite{yang2026}. Di sisi implementasi perangkat keras, model deteksi berbasis YOLO juga terbukti dapat diintegrasikan secara efektif dengan sistem mikrokontroler lokal untuk menghasilkan dasbor analitik pelanggan secara waktu nyata \cite{hairurizal2026}. Dalam konteks penelitian ini, YOLO versi terbaru (YOLO11) difungsikan sebagai variabel kontrol konstan pada tahap deteksi agar seluruh variasi performa metrik murni merefleksikan keandalan algoritma pelacakan yang diuji.
 
+\subsection{Arsitektur YOLO11}
+
+Penelitian ini menggunakan YOLO11 (You Only Look Once versi 11) sebagai model dasar untuk tugas pendeteksian objek. YOLO11 dipilih karena mewakili state-of-the-art dalam keseimbangan antara akurasi deteksi (\textit{mean Average Precision} / mAP) dan kecepatan inferensi (\textit{real-time processing}), yang sangat krusial untuk implementasi analitik video beruntun pada lingkungan komersial.
+
+Secara struktural, arsitektur YOLO11 tidak jauh berbeda dari pendahulunya, namun membawa optimasi signifikan pada ekstraksi fitur dan penanganan objek dalam berbagai skala. Arsitektur jaringan YOLO secara umum divisualisasikan pada Gambar \ref{fig:arsitektur_yolo}.
+
+\begin{figure}[htbp]
+    \centering
+    % Sesuaikan lebar gambar jika terlalu besar/kecil (misal: width=0.9\textwidth)
+    \includegraphics[width=0.85\textwidth, keepaspectratio]{gambar/yolo11.png}
+    \caption{Arsitektur Jaringan YOLO11}
+    \label{fig:arsitektur_yolo}
+\end{figure}
+
+Secara garis besar, arsitektur YOLO11 terbagi menjadi tiga komponen utama pengekstraksi dan pemroses fitur:
+\begin{enumerate}
+    \item \textbf{\textit{Backbone}:} Merupakan bagian hulu arsitektur yang bertugas mengekstraksi fitur visual dasar dari citra input (seperti tepi, tekstur, dan bentuk). YOLO11 menggunakan modul \textit{Convolutional Neural Network} (CNN) yang telah dioptimalkan (misalnya variasi blok C3k2 atau C2f) untuk meningkatkan kapasitas representasi fitur dengan beban komputasi yang lebih ringan.
+    \item \textbf{\textit{Neck}:} Berfungsi untuk mengumpulkan dan menggabungkan fitur-fitur dari berbagai tingkat resolusi (\textit{multi-scale feature aggregation}) yang dihasilkan oleh \textit{Backbone}. Modul seperti \textit{Spatial Pyramid Pooling - Fast} (SPPF) dan \textit{Path Aggregation Network} (PANet) digunakan agar sistem mampu mendeteksi orang dengan skala ukuran yang berbeda-beda, baik yang berada di dekat kamera maupun di kejauhan.
+    \item \textbf{\textit{Head}:} Merupakan lapisan terakhir yang bertanggung jawab mengubah fitur yang telah dikumpulkan menjadi prediksi konkret. \textit{Head} memproyeksikan probabilitas kelas objek (dalam penelitian ini: kelas \textit{person}) beserta koordinat kotak pembatas (\textit{bounding box}) secara serentak (\textit{dense prediction}).
+\end{enumerate}
+
+Dengan arsitektur ini, model hanya memerlukan satu kali proses komputasi meneruskan citra (\textit{single forward pass}) untuk mendeteksi seluruh target manusia di dalam satu bingkai video, menjadikannya ideal sebagai pendeteksi stabil bagi algoritma pelacakan (\textit{Tracker}) yang berjalan di belakangnya.
+
 \section{Multi-Object Tracking (MOT)}
 
 \textit{Multi-Object Tracking} (MOT) merupakan proses komputasi untuk mengidentifikasi keberadaan target serta mempertahankan lintasan (\textit{trajectory}) dari banyak objek secara berkesinambungan dalam urutan bingkai video (\textit{video frames}).
