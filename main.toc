@@ -19,19 +19,22 @@
 \contentsline {section}{\numberline {2.4}Metrik Evaluasi Pelacakan Standar Akademik}{8}{section.2.4}%
 \contentsline {section}{\numberline {2.5}State of the Art}{8}{section.2.5}%
 \contentsline {subsection}{\numberline {2.5.1}State of the Art}{8}{subsection.2.5.1}%
-\contentsline {chapter}{\numberline {3}METODOLOGI}{1}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Diagram Alir Penelitian}{1}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Pengumpulan dan Persiapan Data}{2}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Sumber dan Karakteristik Data}{2}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Pembuatan Data Acuan (\textit {Ground Truth})}{2}{subsection.3.2.2}%
-\contentsline {section}{\numberline {3.3}Arsitektur Sistem \textit {Tracking-by-Detection}}{2}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Ekstraksi Metrik Perilaku Konsumen}{3}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Pengujian dan Evaluasi Sistem}{3}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}Pengujian Kinerja Pelacakan Akademik}{3}{subsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.5.2}Pengujian Tingkat Galat Metrik Bisnis Terpadu}{4}{subsection.3.5.2}%
-\contentsline {subsection}{\numberline {3.5.3}Analisis Korelasi Statistik}{4}{subsection.3.5.3}%
-\contentsline {chapter}{\numberline {4}HASIL YANG DIHARAPKAN}{5}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Hasil yang Diharapkan dari Penelitian}{5}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Hasil Pendahuluan}{5}{section.4.2}%
-\contentsline {chapter}{\numberline {5}JADWAL PENELITIAN}{7}{chapter.5}%
-\contentsline {chapter}{DAFTAR PUSTAKA}{9}{chapter*.13}%
+\contentsline {chapter}{\numberline {3}METODOLOGI}{11}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Diagram Alir Penelitian}{11}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Pengumpulan dan Persiapan Data}{12}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Sumber dan Karakteristik Data}{12}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Pembuatan Data Acuan (\textit {Ground Truth})}{12}{subsection.3.2.2}%
+\contentsline {section}{\numberline {3.3}Lingkungan Pengujian dan Spesifikasi Sistem}{12}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Perangkat Keras (\textit {Hardware})}{12}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Perangkat Lunak (\textit {Software})}{13}{subsection.3.3.2}%
+\contentsline {section}{\numberline {3.4}Arsitektur Sistem \textit {Tracking-by-Detection}}{13}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Ekstraksi Metrik Perilaku Konsumen}{14}{section.3.5}%
+\contentsline {section}{\numberline {3.6}Pengujian dan Evaluasi Sistem}{14}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Pengujian Kinerja Pelacakan Akademik}{14}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.6.2}Pengujian Tingkat Galat Metrik Bisnis Terpadu}{14}{subsection.3.6.2}%
+\contentsline {subsection}{\numberline {3.6.3}Analisis Korelasi Statistik}{15}{subsection.3.6.3}%
+\contentsline {chapter}{\numberline {4}HASIL YANG DIHARAPKAN}{17}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Hasil yang Diharapkan dari Penelitian}{17}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Hasil Pendahuluan}{17}{section.4.2}%
+\contentsline {chapter}{\numberline {5}JADWAL PENELITIAN}{19}{chapter.5}%
+\contentsline {chapter}{DAFTAR PUSTAKA}{21}{chapter*.13}%

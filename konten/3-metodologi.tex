@@ -1,5 +1,4 @@
 \chapter[METODOLOGI]{METODOLOGI}
-\pagenumbering{arabic}
 \sloppy
 
 Bab ini menguraikan tahapan-tahapan penelitian yang dilakukan untuk menjawab rumusan masalah. Pembahasan mencakup alur penelitian, pengumpulan dan persiapan data, perancangan arsitektur sistem pelacakan, metode ekstraksi perilaku konsumen, hingga skenario pengujian dan metrik evaluasi yang digunakan.
@@ -37,11 +36,31 @@ Data diperoleh secara langsung melalui perekaman sistem kamera pengawas (CCTV) d
 \subsection{Pembuatan Data Acuan (\textit{Ground Truth})}
 Video mentah yang telah dikumpulkan kemudian dianotasi secara manual untuk membentuk data acuan (\textit{ground truth}). Anotasi dilakukan dengan mencatat stempel waktu (\textit{timestamp}) aktual pada level bingkai (\textit{frame-level}) untuk mendata tiga parameter utama: (1) total volume pengunjung yang melewati garis virtual kasir, (2) durasi waktu singgah riil per individu di area etalase, dan (3) durasi waktu antre per individu. Data acuan ini menjadi standar emas absolut untuk mengukur margin galat sistem pelacakan otomatis nantinya.
 
+\section{Lingkungan Pengujian dan Spesifikasi Sistem}
+
+Dalam menjalankan simulasi dan pengujian algoritma \textit{Multi-Object Tracking} (MOT), penelitian ini membutuhkan spesifikasi perangkat keras dan perangkat lunak yang memadai guna menjaga stabilitas akselerasi komputasi \textit{Deep Learning}. 
+
+\subsection{Perangkat Keras (\textit{Hardware})}
+Perangkat keras yang digunakan untuk menjalankan eksperimen deteksi YOLO11 dan pelacakan berbasis \textit{bounding box} adalah satu unit komputer jinjing (\textit{laptop}) dengan spesifikasi sebagai berikut:
+\begin{itemize}
+    \item \textbf{Prosesor (CPU):} Intel Core i7-12650H. Bertugas menangani beban pemrosesan logika komputasi sekuensial, manajemen \textit{thread}, dan eksekusi skrip ekstraksi metrik spasial.
+    \item \textbf{Unit Pemroses Grafis :} NVIDIA GeForce RTX 4050 Laptop GPU (\textit{Mobile}). GPU ini berperan krusial dalam akselerasi komputasi paralel dan pemrosesan \textit{frame} video secara konstan, sehingga evaluasi parameter \textit{System FPS} pada masing-masing algoritma dapat diukur secara objektif.
+    \item \textbf{Memori :} 16 GB. Kapasitas memori ini dialokasikan untuk memastikan kelancaran pemuatan bobot (\textit{weights}) model detektor, penyanggaan (\textit{buffering}) \textit{frame} memori video, serta kelancaran operasional sistem secara keseluruhan.
+\end{itemize}
+
+\subsection{Perangkat Lunak (\textit{Software})}
+Lingkungan perangkat lunak yang digunakan dalam pengembangan dan pengujian sistem analitik ini meliputi:
+\begin{itemize}
+    \item \textbf{Sistem Operasi dan IDE:} Sistem operasi Windows 11 yang digunakan bersama lingkungan \textit{Integrated Development Environment} (IDE) Visual Studio Code (VS Code) untuk penulisan dan eksekusi kode.
+    \item \textbf{Pustaka (\textit{Library}) Utama:} Python 3 dengan pustaka PyTorch (untuk \textit{tensor backend}), OpenCV (untuk ekstraksi \textit{frame} video dan visualisasi \textit{polygon/tripwire}), serta model YOLO11 dari Ultralytics.
+    \item \textbf{Modul Pelacakan:} Repositori \textit{BoxMOT} yang menyediakan antarmuka integrasi untuk menjalankan algoritma ByteTrack, BoT-SORT, OC-SORT, dan Deep OC-SORT.
+\end{itemize}
+
 \section{Arsitektur Sistem \textit{Tracking-by-Detection}}
 
 Sistem pelacakan pada penelitian ini dirancang menggunakan paradigma \textit{Tracking-by-Detection} (TbD). Alur pemrosesan data divisualisasikan pada Gambar \ref{fig:pipeline_tbd}.
 
-% Pastikan gambar pipeline-tbd.png sudah ada di folder gambar/
+% Pastikan gambar Alur Pemrosesan.png sudah ada di folder gambar/
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.8\textwidth]{gambar/Alur Pemrosesan.png}
@@ -49,7 +68,7 @@ Sistem pelacakan pada penelitian ini dirancang menggunakan paradigma \textit{Tra
     \label{fig:pipeline_tbd}
 \end{figure}
 
-Alur kerja arsitektur sistem pada Gambar \ref{fig:Alur Pemrosesan} diuraikan sebagai berikut:
+Alur kerja arsitektur sistem pada Gambar \ref{fig:pipeline_tbd} diuraikan sebagai berikut:
 \begin{enumerate}
     \item Sistem menerima input berupa bingkai (\textit{frame}) video ritel secara sekuensial.
     \item Setiap bingkai diproses oleh model detektor YOLO11 untuk melokalisasi target manusia dan menghasilkan koordinat kotak pembatas (\textit{bounding boxes}).
@@ -63,7 +82,7 @@ Alur kerja arsitektur sistem pada Gambar \ref{fig:Alur Pemrosesan} diuraikan seb
 Hasil keluaran berupa koordinat target beserta ID unik dari sistem MOT tidak dapat langsung dibaca sebagai metrik bisnis. Oleh karena itu, diperlukan modul logika tambahan untuk mengekstraksinya:
 \begin{itemize}
     \item \textbf{Penghitungan Pengunjung (\textit{People Counting}):} Dihitung berdasarkan logika persilangan garis virtual (\textit{tripwire}). Jika titik tengah koordinat kaki target dengan ID tertentu memotong garis dari arah A ke B, maka sistem akan menambahkan hitungan masuk.
-    \item \textbf{Waktu Singgah (\textit{Dwell Time}):} Dihitung dengan mendefinisikan poligon area ketertarikan (\textit{Region of Interest} / ROI) pada etalase. Sistem merekam waktu (\textit{frame}) saat ID tertentu masuk ke dalam poligon ($t_{\text{masuk}}$) dan waktu saat ID tersebut keluar ($t_{\text{keluar}}$). Durasi dikonversi ke detik berdasarkan \textit{frame rate} video.
+    \item \textbf{Waktu Singgah (\textit{Dwell Time}):} Dihitung dengan mendefinisikan poligon area ketertarikan (\textit{Region of Interest} / ROI) pada etalase. Sistem merekam indeks \textit{frame} saat ID tertentu masuk ke dalam poligon ($t_{\text{masuk}}$) dan indeks \textit{frame} saat ID tersebut keluar ($t_{\text{keluar}}$). Durasi dikonversi ke detik murni berdasarkan \textit{frame rate} asli video untuk mencegah distorsi waktu akibat penurunan beban komputasi.
     \item \textbf{Waktu Antre (\textit{Queue Time}):} Dihitung dari akumulasi waktu saat suatu ID berada di dalam poligon area kasir dengan kondisi perpindahan koordinat piksel yang sangat lambat di bawah ambang batas kecepatan tertentu (\textit{statis}).
 \end{itemize}
 
